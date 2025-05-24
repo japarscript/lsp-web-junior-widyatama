@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Todo List Sederhana</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <!-- Header -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <h1 class="card-title text-primary mb-0">
+                            <i class="fas fa-tasks mr-2"></i>Aplikasi Todolist
+                        </h1>
+                        <p class="text-muted">Sertifikasi LSP, Japar Sidik (NPM: 0620204008)</p>
+                    </div>
+                </div>
+
+                <!-- Form Tambah Tugas -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-9 col-8 mb-2 mb-md-0">
+                                <input type="text" id="taskInput" class="form-control" placeholder="Masukkan tugas baru...">
+                            </div>
+                            <div class="col-md-3 col-4">
+                                <button type="button" id="addTaskBtn" class="btn btn-primary btn-block">
+                                    <i class="fas fa-plus mr-1"></i>Tambah
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+                <!-- Filter Tugas -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary active col">
+                                <input type="radio" name="filter" value="all" checked> Semua
+                            </label>
+                            <label class="btn btn-outline-warning col">
+                                <input type="radio" name="filter" value="pending"> Pending
+                            </label>
+                            <label class="btn btn-outline-success col">
+                                <input type="radio" name="filter" value="completed"> Selesai
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daftar Tugas -->
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-list mr-2"></i>Daftar Tugas
+                        </h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div id="taskList">
+                            <!-- Pesan ketika tidak ada tugas -->
+                            <div id="emptyMessage" class="text-center py-5">
+                                <i class="fas fa-clipboard-list fa-3x text-muted mb-3"></i>
+                                <h5 class="text-muted">Belum ada tugas</h5>
+                                <p class="text-muted">Tambahkan tugas sekarang.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
